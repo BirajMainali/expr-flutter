@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/intro_screen.dart';
 
 void main() {
-  runApp(GlobalApp());
+  runApp(const GlobalApp());
 }
 
 class GlobalApp extends StatelessWidget {
@@ -16,6 +16,6 @@ class GlobalApp extends StatelessWidget {
           primarySwatch: Colors.cyan,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: IntroScreen());
+        home: const IntroScreen());
   }
 }

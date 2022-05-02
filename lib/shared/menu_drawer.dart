@@ -32,18 +32,18 @@ class MenuDrawer extends StatelessWidget {
         ),
       ),
     );
-    menuTitles.forEach((String element) {
+    for (var element in menuTitles) {
       Widget screen = Container();
       menuItems.add(
         ListTile(
-            title: Text(element, style: TextStyle(fontSize: 20)),
+            title: Text(element, style: const TextStyle(fontSize: 20)),
             onTap: () {
               switch (element) {
                 case 'Home':
-                  screen = IntroScreen();
+                  screen = const IntroScreen();
                   break;
                 case 'BMI Calculator':
-                  screen = BMIScreen();
+                  screen = const BMIScreen();
                   break;
               }
               Navigator.pop(context);
@@ -51,7 +51,7 @@ class MenuDrawer extends StatelessWidget {
                   .push(MaterialPageRoute(builder: (context) => screen));
             }),
       );
-    });
+    }
     return menuItems;
   }
 }
