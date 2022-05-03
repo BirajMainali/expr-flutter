@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_flutter/shared/menu_drawer.dart';
+import '../shared/menu_bottom.dart';
+import '../shared/menu_drawer.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class IntroScreen extends StatelessWidget {
           title: const Text("Globo App"),
         ),
         drawer: const MenuDrawer(),
+        bottomNavigationBar: MenuBottom(),
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(

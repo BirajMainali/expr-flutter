@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/bmi_screen.dart';
 import 'screens/intro_screen.dart';
 
 void main() {
@@ -13,9 +14,13 @@ class GlobalApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-          primarySwatch: Colors.cyan,
+          primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: const IntroScreen());
+        routes: {
+          '/': (context) => const IntroScreen(),
+          '/bmi': (context) => const BMIScreen(),
+        },
+        initialRoute: '/');
   }
 }
