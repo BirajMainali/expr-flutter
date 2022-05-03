@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import '../shared/menu_bottom.dart';
 import '../shared/menu_drawer.dart';
 
@@ -49,11 +47,11 @@ class _BMIScreenState extends State<BMIScreen> {
               children: [
                 ToggleButtons(children: [
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child:
                           Text("Metric", style: TextStyle(fontSize: fontSize))),
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text("Imperial",
                           style: TextStyle(fontSize: fontSize))),
                 ], isSelected: isSelected, onPressed: toggleMeasure),

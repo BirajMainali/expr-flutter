@@ -8,12 +8,11 @@ class Weather {
   Weather(this.name, this.description, this.temprature, this.pereceived,
       this.pressure, this.humidity);
   Weather.fromJson(Map<String, dynamic> weatherMap) {
-    this.name = weatherMap["name"];
-    this.temprature = (weatherMap["main"]["temp"] - 273.15).toDouble() ?? 0;
-    this.pereceived =
-        (weatherMap["main"]["feels_like"] - 273.15).toDouble() ?? 0;
-    this.pressure = weatherMap["main"]["pressure"] ?? 0;
-    this.humidity = weatherMap["main"]["humidity"] ?? 0;
-    this.description = weatherMap["weather"][0]["description"] ?? "";
+    name = weatherMap["name"];
+    temprature = (weatherMap["main"]["temp"] - 273.15).toDouble() ?? 0;
+    pereceived = (weatherMap["main"]["feels_like"] - 273.15).toDouble() ?? 0;
+    pressure = weatherMap["main"]["pressure"] ?? 0;
+    humidity = weatherMap["main"]["humidity"] ?? 0;
+    description = weatherMap["weather"][0]["description"] ?? "";
   }
 }

@@ -18,13 +18,13 @@ class MenuBottom extends StatelessWidget {
               break;
           }
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
-            icon: const Icon(Icons.home),
+            icon: Icon(Icons.home),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.monitor_weight),
+            icon: Icon(Icons.monitor_weight),
             label: "BMI",
           ),
         ]);
