@@ -12,7 +12,7 @@ class IntroScreen extends StatelessWidget {
           title: const Text("Globo App"),
         ),
         drawer: const MenuDrawer(),
-        bottomNavigationBar: MenuBottom(),
+        bottomNavigationBar: const MenuBottom(),
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
